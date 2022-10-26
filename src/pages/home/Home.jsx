@@ -17,20 +17,24 @@ const Home = () => {
   const REACT_APP_TMDB_KEY = 'b41e38a110d56e861987601ac78202ce'
   const REACT_APP_BASE_URL = 'https://api.themoviedb.org/3'
 
-
-
   const fetchMovies = async (searchKey) => {
     const type = searchKey ? "search" : "discover";
-    const {
-      data: { results },
-    } = await axios.get(`${REACT_APP_BASE_URL}/${type}/movie/`, {
+    // const {data: { results },} = await axios.get(`${REACT_APP_BASE_URL}/${type}/movie/`, {
+    //   params: {
+    //     api_key: REACT_APP_TMDB_KEY,
+    //     query: searchKey,
+    //   },
+    // });
+    const tmdbInstance = await axios.create({
+      baseURL: REACT_APP_BASE_URL,
       params: {
+        // TODO: Jangan lupa masukkan API_KEY yang benarnya di sini yah !
         api_key: REACT_APP_TMDB_KEY,
         query: searchKey,
       },
-    });
-    setMovies(results);
-    await selectMovie(results[0]);
+    }).get(`/${type}/movie/`)
+    setMovies(tmdbInstance.data.results);
+    await selectMovie(tmdbInstance.data.results[0]);
   };
 
   const fetchMovie = async (id) => {
