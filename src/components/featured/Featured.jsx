@@ -1,7 +1,7 @@
 import "./featured.scss";
 import { InfoOutlined, PlayArrow } from "@mui/icons-material";
 const Featured = ({ type, poster, trailer,playTrailer,setPlayTrailer }) => {
-  const REACT_APP_IMGBACKDROP_URL = 'https://image.tmdb.org/t/p/w1280'
+  const REACT_APP_IMGBACKDROP_URL = 'http://image.tmdb.org/t/p/w1280'
   return (
     <div className="featured">
       {type && (
