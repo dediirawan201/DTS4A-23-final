@@ -27,7 +27,6 @@ const Home = () => {
     const tmdbInstance = await axios.create({
       baseURL: REACT_APP_BASE_URL,
       params: {
-        // TODO: Jangan lupa masukkan API_KEY yang benarnya di sini yah !
         api_key: REACT_APP_TMDB_KEY,
         query: searchKey,
       },

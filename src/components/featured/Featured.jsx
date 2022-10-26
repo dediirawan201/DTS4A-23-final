@@ -1,8 +1,5 @@
 import "./featured.scss";
-import Poster from "../../assets/img/MoviePoster.png";
-import PosterName from "../../assets/img/MovieName.png";
 import { InfoOutlined, PlayArrow } from "@mui/icons-material";
-import { useState } from "react";
 const Featured = ({ type, poster, trailer,playTrailer,setPlayTrailer }) => {
   const REACT_APP_IMGBACKDROP_URL = 'https://image.tmdb.org/t/p/w1280'
   return (
@@ -18,7 +15,6 @@ const Featured = ({ type, poster, trailer,playTrailer,setPlayTrailer }) => {
           </select>
         </div>
       )}
-      {/* <img src={Poster} alt=''/> */}
       <div
         className="backdrop"
         style={{
@@ -39,7 +35,7 @@ const Featured = ({ type, poster, trailer,playTrailer,setPlayTrailer }) => {
             </button>
             <button className="more">
               <InfoOutlined />
-              <span>More Information</span>
+              <span>Info Lebih Lanjut</span>
             </button>
           </div>
         </div>
