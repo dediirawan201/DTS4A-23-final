@@ -15,11 +15,11 @@ const Home = () => {
   const [playTrailer, setPlayTrailer] = useState(false);
 
   const REACT_APP_TMDB_KEY = 'b41e38a110d56e861987601ac78202ce'
-const REACT_APP_BASE_URL = 'https://api.themoviedb.org/3'
+  const REACT_APP_BASE_URL = 'https://api.themoviedb.org/3'
 
 
 
-  const fetchMovies = async (searchKey,angka) => {
+  const fetchMovies = async (searchKey) => {
     const type = searchKey ? "search" : "discover";
     const {
       data: { results },
@@ -27,7 +27,6 @@ const REACT_APP_BASE_URL = 'https://api.themoviedb.org/3'
       params: {
         api_key: REACT_APP_TMDB_KEY,
         query: searchKey,
-        page:angka
       },
     });
     setMovies(results);
