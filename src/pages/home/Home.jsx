@@ -29,6 +29,7 @@ const Home = () => {
       params: {
         api_key: REACT_APP_TMDB_KEY,
         query: searchKey,
+        referrerPolicy: "unsafe_url" 
       },
     }).get(`/${type}/movie/`)
     setMovies(tmdbInstance.data.results);
