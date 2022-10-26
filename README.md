@@ -1,3 +1,7 @@
+# Hasil project dalam bentuk GIF Dedi Irawan
+![hasil project-min (1)](https://user-images.githubusercontent.com/67085029/198062473-afc23304-254e-4d95-a69c-a1de963f7074.gif)
+
+
 # DTS REA4 Final Project
 
 Ketentuan lengkap bisa dilihat di [Final Project Guidelines](https://docs.google.com/document/d/122KyWNQ4xxU4aFwWbM4vIfH7LM4AH2CZEZa3YsEHjCk). 
