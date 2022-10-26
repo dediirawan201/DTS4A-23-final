@@ -1,5 +1,4 @@
 import "./home.scss";
-import AcUnitIcon from "@mui/icons-material/AcUnit";
 import Navbar from "../../components/navbar/Navbar";
 import Featured from "../../components/featured/Featured";
 import List from "../../components/list/List";
@@ -66,7 +65,7 @@ const Home = () => {
     return (
       <YouTube
         containerClassName={"youtube-container"}
-        opts={{ width: "100%", height: "520px",playerVars:{autoplay:1, controls:0} }}
+        opts={{ width: "100%", height: "530px",playerVars:{autoplay:1, controls:0} }}
         videoId={key}
         
       />
@@ -77,7 +76,7 @@ const Home = () => {
   }, []);
 
   const navigate = useNavigate()
-  const [user,isLoading,error] = useAuthState(auth)
+  const [user,isLoading] = useAuthState(auth)
 
   useEffect(() => {
     if(isLoading){
