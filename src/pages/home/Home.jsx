@@ -14,13 +14,18 @@ const Home = () => {
   const [selectedMovie, setSelectedMovie] = useState({});
   const [playTrailer, setPlayTrailer] = useState(false);
 
+  const REACT_APP_TMDB_KEY = 'b41e38a110d56e861987601ac78202ce'
+const REACT_APP_BASE_URL = 'https://api.themoviedb.org/3'
+
+
+
   const fetchMovies = async (searchKey,angka) => {
     const type = searchKey ? "search" : "discover";
     const {
       data: { results },
-    } = await axios.get(`${process.env.REACT_APP_BASE_URL}/${type}/movie/`, {
+    } = await axios.get(`${REACT_APP_BASE_URL}/${type}/movie/`, {
       params: {
-        api_key: process.env.REACT_APP_TMDB_KEY,
+        api_key: REACT_APP_TMDB_KEY,
         query: searchKey,
         page:angka
       },
@@ -31,10 +36,10 @@ const Home = () => {
 
   const fetchMovie = async (id) => {
     const { data } = await axios.get(
-      `${process.env.REACT_APP_BASE_URL}/movie/${id}`,
+      `${REACT_APP_BASE_URL}/movie/${id}`,
       {
         params: {
-          api_key: process.env.REACT_APP_TMDB_KEY,
+          api_key: REACT_APP_TMDB_KEY,
           append_to_response: "videos",
         },
       }

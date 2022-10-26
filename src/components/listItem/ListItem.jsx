@@ -4,7 +4,7 @@ import { Add, PlayArrow, ThumbDownOutlined, ThumbUpAltOutlined } from '@mui/icon
 import { useEffect, useState } from 'react';
 
 const ListItem = ({index,film,pilihMovi}) => {
-
+  const REACT_APP_IMG_URL = 'https://image.tmdb.org/t/p/w500'
   const [isHovered, setIsHovered] = useState(false)
 
    return (
@@ -15,7 +15,7 @@ const ListItem = ({index,film,pilihMovi}) => {
     onMouseLeave={() => setIsHovered(false)}
     >
 
-          <img  src={`${process.env.REACT_APP_IMG_URL}/${film.poster_path}`} alt=''/>
+          <img  src={`${REACT_APP_IMG_URL}/${film.poster_path}`} alt=''/>
         {isHovered && (
           <>
         <video src={film.video} autoPlay={true} loop/>

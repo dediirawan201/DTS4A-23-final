@@ -4,7 +4,7 @@ import PosterName from "../../assets/img/MovieName.png";
 import { InfoOutlined, PlayArrow } from "@mui/icons-material";
 import { useState } from "react";
 const Featured = ({ type, poster, trailer,playTrailer,setPlayTrailer }) => {
-  
+  const REACT_APP_IMGBACKDROP_URL = 'https://image.tmdb.org/t/p/w1280'
   return (
     <div className="featured">
       {type && (
@@ -22,7 +22,7 @@ const Featured = ({ type, poster, trailer,playTrailer,setPlayTrailer }) => {
       <div
         className="backdrop"
         style={{
-          backgroundImage: `url('${process.env.REACT_APP_IMGBACKDROP_URL}${poster.backdrop_path}')`,
+          backgroundImage: `url('${REACT_APP_IMGBACKDROP_URL}${poster.backdrop_path}')`,
         }}
       >
         {playTrailer ? <button className={'button button--close'} onClick={() => setPlayTrailer(false)}>Close</button> : null}
